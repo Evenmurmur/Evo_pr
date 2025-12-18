@@ -10,6 +10,6 @@ build:
   services:
     - docker:24-dind
   script:
-    - echo "Тестовый пайплайн запускается"
+    - echo "Тестовый пайплайн запускается!"
     - docker --version
     - docker build -t $IMAGE_NAME .
