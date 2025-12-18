@@ -3,5 +3,6 @@ stages:
 
 test-job:
   stage: test
+  tags: ["local"]
   script:
     - echo "Runner is working!"
