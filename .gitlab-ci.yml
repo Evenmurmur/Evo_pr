@@ -1,0 +1,22 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  IMAGE: $CI_REGISTRY_IMAGE:$CI_COMMIT_SHORT_SHA
+
+build:
+  stage: build
+  image: docker:24
+  services:
+    - docker:24-dind
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker build -t $IMAGE -f docker/Dockerfile .
+    - docker push $IMAGE
+
+deploy:
+  stage: deploy
+  script:
+    - sed -i "s|IMAGE_PLACEHOLDER|$IMAGE|g" k8s/deployment.yaml
+    - kubectl apply -f k8s/
