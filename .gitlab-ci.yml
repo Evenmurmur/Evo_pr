@@ -1,15 +1,7 @@
 stages:
-  - build
+  - test
 
-variables:
-  IMAGE_NAME: test-image
-
-build:
-  stage: build
-  image: docker:24
-  services:
-    - docker:24-dind
+test_job:
+  stage: test
   script:
-    - echo "Тестовый пайплайн запускается!"
-    - docker --version
-    - docker build -t $IMAGE_NAME .
+    - echo "Runner видит job!"
