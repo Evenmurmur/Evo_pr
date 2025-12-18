@@ -1,9 +1,3 @@
-stages:
-  - test
-
-test_job:
-  stage: test
-  tags:
-      - local
+test:
   script:
-    - echo "Runner видит job!!!"
+    - echo "HELLO CI"
