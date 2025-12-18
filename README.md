@@ -5,7 +5,8 @@
 ---
 
 ## Структура проекта
-
+<pre>
+  ```
 Evo_pr/
 ├─ docker/
 │ └─ Dockerfile
@@ -18,7 +19,8 @@ Evo_pr/
 │ └─ ci-cd.yml
 ├─ .gitignore
 └─ README.md
-
+```
+</pre>
 ---
 
 **Сборка Docker-образа локально**
