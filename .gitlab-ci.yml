@@ -1,8 +1,15 @@
 stages:
-  - test
+  - build
 
-test-job:
-  stage: test
-  tags: ["local"]
+variables:
+  IMAGE_NAME: test-image
+
+build:
+  stage: build
+  image: docker:24
+  services:
+    - docker:24-dind
   script:
-    - echo "Runner is working!!!"
+    - echo "Тестовый пайплайн запускается"
+    - docker --version
+    - docker build -t $IMAGE_NAME .
