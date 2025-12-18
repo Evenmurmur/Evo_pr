@@ -3,5 +3,7 @@ stages:
 
 test_job:
   stage: test
+  tags:
+    - local
   script:
     - echo "Runner видит job!"
