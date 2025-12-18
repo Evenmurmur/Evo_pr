@@ -80,8 +80,10 @@ kubectl apply -f k8s/
 kubectl rollout status deployment/nginx-pet
 ```
 
-Контакты
+**Контакты:**
 
-Автор: [Богдан]
+Автор: Богдан
+
 Telegram: [@Evenlumber](https://t.me/Evenlumber])
+
 Email: [Alihanovbogdan12345@gmail.com](mailto:Alihanovbogdan12345@gmail.com)
