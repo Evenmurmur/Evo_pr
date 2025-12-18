@@ -6,4 +6,4 @@ test_job:
   tags:
     - local
   script:
-    - echo "Runner видит job!"
+    - echo "Runner видит job!!!"
