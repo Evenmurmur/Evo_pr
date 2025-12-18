@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-pet
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-pet
+  template:
+    metadata:
+      labels:
+        app: nginx-pet
+    spec:
+      containers:
+        - name: nginx
+          image: my-nginx:latest
+          ports:
+            - containerPort: 80
