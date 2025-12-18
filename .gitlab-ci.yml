@@ -5,4 +5,4 @@ test-job:
   stage: test
   tags: ["local"]
   script:
-    - echo "Runner is working!!"
+    - echo "Runner is working!!!"
